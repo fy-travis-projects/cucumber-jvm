@@ -6,3 +6,4 @@ cache:
 
 before_install:
   - rm ~/.m2/settings.xml
+  - mvn verify --toolchains .m2/travis-ci-toolchains.xml
