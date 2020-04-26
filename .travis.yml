@@ -7,3 +7,7 @@ cache:
 before_install:
   - rm ~/.m2/settings.xml
   - mvn verify --toolchains .m2/travis-ci-toolchains.xml
+
+install: true
+script:
+  - mvn install -DskipTests=true -DskipITs=true -Darchetype.test.skip=true -Dmaven.javadoc.skip=true -B -V --toolchains .m2/travis-ci-toolchains.xml
